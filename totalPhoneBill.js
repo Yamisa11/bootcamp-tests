@@ -9,10 +9,9 @@ function totalPhoneBill(data){
           var split2 = splitted[i].trim();
            if(split2.startsWith('sms')){
           sms = sms + 0.65;
-           }
-           if(split2.startsWith('call')){
+           }else if(split2.startsWith('call')){
           calls = calls + 2.75;
-           }
+           }else {return "indicate sms/call"}
          
         totalBill = sms + calls;
       }
